@@ -1,0 +1,255 @@
+@import './taklifnoma.css';
+
+@font-face {
+  font-family: 'Andasia';
+  src: url('/assets/andasia-2HtZKfpH.ttf') format('truetype');
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Great Vibes';
+  src: url('/assets/great-vibes-latin-400-normal-q5-78SH_.woff2') format('woff2');
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+}
+
+html, body, #root {
+  height: 100%;
+  min-height: 100dvh;
+  margin: 0;
+  padding: 0;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  /* =========================================================================
+     ULTRA-HIGH CONTRAST ROYAL WEDDING TYPOGRAPHY & CARD SYSTEM
+     ("yozuvlar rangini yaqqol korinadigan qil")
+     ========================================================================= */
+
+  /* =========================================================================
+     RESPONSIVE SPACIOUS MOBILE LAYOUT ("siqilganday ko'rinmasin")
+     ========================================================================= */
+
+  /* Ensure card has comfortable room on phones (up to 440px) */
+  .invitation {
+    width: 100% !important;
+    max-width: 440px !important;
+    margin: 0 auto !important;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.6) !important;
+  }
+
+  /* Disable rigid scroll snapping so users can scroll naturally and smoothly */
+  .invitation__content {
+    scroll-snap-type: none !important;
+    -webkit-overflow-scrolling: touch !important;
+    padding-bottom: 60px !important;
+  }
+
+  /* Reduce oppressive 16% horizontal padding so the card content has full breathing space */
+  .text-scene {
+    min-height: auto !important;
+    padding: 28px 12px !important;
+    scroll-snap-align: none !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .text-scene--top {
+    min-height: 100svh !important;
+    padding-top: 75px !important;
+    padding-bottom: 24px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  /* Royal Luxury Card Container: Pure white card with 2px gold border */
+  .royal-card-box {
+    background: rgba(255, 255, 255, 0.96) !important;
+    border: 2px solid #C89D35 !important;
+    border-radius: 22px !important;
+    padding: 22px 16px !important;
+    box-shadow: 
+      0 10px 30px rgba(74, 7, 19, 0.16),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.95),
+      inset 0 0 18px rgba(200, 157, 53, 0.1) !important;
+    width: 100% !important;
+    max-width: 416px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Deep Royal Burgundy Headings - 100% Sharp & Contrast */
+  .royal-heading {
+    color: #3D050E !important;
+    font-family: 'Cinzel', 'Georgia', serif !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.03em !important;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.9) !important;
+    -webkit-text-fill-color: #3D050E !important;
+  }
+
+  /* Ultra-Clear Body Text - Deep Espresso / Near Black */
+  .royal-body-text {
+    color: #1A110D !important;
+    font-family: 'Manrope', 'Segoe UI', sans-serif !important;
+    font-weight: 600 !important;
+    font-size: 1.05rem !important;
+    line-height: 1.65 !important;
+    text-shadow: none !important;
+    -webkit-text-fill-color: #1A110D !important;
+  }
+
+  /* Couple Names Hero - Bold Velvet Burgundy with Crisp White/Gold Halo */
+  .royal-couple-hero {
+    color: #3D050E !important;
+    font-family: 'Great Vibes', 'Cinzel', Georgia, cursive !important;
+    font-size: clamp(3.2rem, 15vw, 4.3rem) !important;
+    font-weight: 800 !important;
+    line-height: 0.95 !important;
+    text-align: center !important;
+    display: block !important;
+    text-shadow: 
+      -1px -1px 0 #FFF,
+      1px -1px 0 #FFF,
+      -1px 1px 0 #FFF,
+      1px 1px 0 #FFF,
+      0 2px 6px rgba(200, 157, 53, 0.7),
+      0 4px 14px rgba(61, 5, 14, 0.3) !important;
+    -webkit-text-fill-color: #3D050E !important;
+  }
+
+  /* Ampersand & */
+  .royal-ampersand {
+    color: #B8860B !important;
+    font-family: 'Cinzel', serif !important;
+    font-weight: 900 !important;
+    font-size: 0.75em !important;
+    display: block !important;
+    margin: 4px 0 !important;
+    text-shadow: 
+      -1px -1px 0 #FFF,
+      1px -1px 0 #FFF,
+      -1px 1px 0 #FFF,
+      1px 1px 0 #FFF,
+      0 1px 4px rgba(200, 157, 53, 0.8) !important;
+    -webkit-text-fill-color: #B8860B !important;
+  }
+
+  /* Date Badge */
+  .royal-date-badge {
+    background: #FFFFFF !important;
+    border: 2px solid #C89D35 !important;
+    border-radius: 16px 4px !important;
+    padding: 14px 26px !important;
+    margin: 32px auto 0 !important;
+    width: fit-content !important;
+    min-width: 230px !important;
+    box-shadow: 
+      0 8px 24px rgba(61, 5, 14, 0.2),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.9) !important;
+  }
+
+  .royal-date-day {
+    color: #3D050E !important;
+    font-weight: 900 !important;
+    font-size: 1.35rem !important;
+    letter-spacing: 0.05em !important;
+    display: block !important;
+    text-transform: uppercase !important;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.8) !important;
+    -webkit-text-fill-color: #3D050E !important;
+  }
+
+  .royal-date-time {
+    color: #7A1422 !important;
+    font-weight: 800 !important;
+    font-size: 1.15rem !important;
+    letter-spacing: 0.03em !important;
+    display: block !important;
+    margin-top: 3px !important;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.8) !important;
+    -webkit-text-fill-color: #7A1422 !important;
+  }
+
+  /* Zarhal Fallback classes */
+  .zarhal-couple {
+    color: #3D050E !important;
+    font-weight: 800 !important;
+    text-shadow: 0 1px 1px #fff, 0 2px 4px rgba(180, 130, 40, 0.5) !important;
+    -webkit-text-fill-color: #3D050E !important;
+  }
+
+  .zarhal-ampersand {
+    color: #B8860B !important;
+    text-shadow: 0 1px 2px #fff !important;
+    font-size: 0.85em;
+    -webkit-text-fill-color: #B8860B !important;
+  }
+
+  .zarhal-badge {
+    background: #FFFFFF !important;
+    border: 2px solid #C89D35 !important;
+    box-shadow: 0 8px 24px rgba(50, 10, 18, 0.22), inset 0 0 0 1px #fff !important;
+  }
+
+  .zarhal-date {
+    color: #3D050E !important;
+    font-weight: 900 !important;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.9) !important;
+    letter-spacing: 0.05em !important;
+    -webkit-text-fill-color: #3D050E !important;
+  }
+
+  .zarhal-heading {
+    color: #3D050E !important;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.95) !important;
+    font-weight: 800 !important;
+    -webkit-text-fill-color: #3D050E !important;
+  }
+
+  /* Real Metallic Gold Foil Text */
+  .text-gold-foil {
+    background: linear-gradient(135deg, #A88330 0%, #F5E59E 28%, #D4AF37 50%, #FAF0CD 72%, #8C6618 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 1px 1px rgba(60, 40, 10, 0.25));
+  }
+
+  /* Shimmering animation on metallic text */
+  .text-shimmer {
+    background: linear-gradient(
+      90deg,
+      #B38728 0%,
+      #FDF2B5 25%,
+      #D4AF37 50%,
+      #FDF2B5 75%,
+      #B38728 100%
+    );
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmerEffect 4s linear infinite;
+  }
+
+  /* Real Gold Foil Border */
+  .border-gold-foil {
+    border-color: #D4AF37;
+    border-image: linear-gradient(135deg, #B38728, #FBF5B7, #DAA520, #AA771C) 1;
+  }
+}
+
+@keyframes shimmerEffect {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
