@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: 'Andasia';
-  src: url('/assets/andasia-2HtZKfpH.ttf') format('truetype');
+  src: url('./andasia-2HtZKfpH.ttf') format('truetype');
   font-display: swap;
   font-style: normal;
   font-weight: 400;
@@ -10,7 +10,7 @@
 
 @font-face {
   font-family: 'Great Vibes';
-  src: url('/assets/great-vibes-latin-400-normal-q5-78SH_.woff2') format('woff2');
+  src: url('./great-vibes-latin-400-normal-q5-78SH_.woff2') format('woff2');
   font-display: swap;
   font-style: normal;
   font-weight: 400;

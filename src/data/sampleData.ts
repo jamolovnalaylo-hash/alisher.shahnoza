@@ -1,7 +1,7 @@
 import { WeddingInvitationData, DesignThemeConfig } from '../types';
 
-export const DEFAULT_BRIDE_PHOTO = "/assets/couple-alisher-shaxnoza.jpg";
-export const DEFAULT_GROOM_PHOTO = "/assets/couple-alisher-shaxnoza.jpg";
+export const DEFAULT_BRIDE_PHOTO = "./assets/couple-alisher-shaxnoza.jpg";
+export const DEFAULT_GROOM_PHOTO = "./assets/couple-alisher-shaxnoza.jpg";
 
 export const INITIAL_INVITATION_DATA: WeddingInvitationData = {
   id: "royal-invitation-2027",
@@ -22,7 +22,7 @@ Sizni Alisher va Shahnozaning nikoh to‘yi munosabati bilan quvonchli marosimim
   footerNote: "«Sizning tashrifingiz to‘yimizga cheksiz quvonch bag‘ishlaydi!»",
   parentsNames: "Buxoro xonadoni",
   language: "uz",
-  musicTrack: "/assets/choli-qushi.mp3",
+  musicTrack: "./assets/choli-qushi.mp3",
   musicTitle: "Çalıkuşu (\"Choli qushi\") seriali musiqasi",
   rsvpList: [
     {

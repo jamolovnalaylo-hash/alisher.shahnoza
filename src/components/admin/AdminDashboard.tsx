@@ -221,8 +221,8 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
   const handleResetPhoto = () => {
     setFormData((prev) => ({
       ...prev,
-      bridePhoto: '/assets/couple-alisher-shaxnoza.jpg',
-      groomPhoto: '/assets/couple-alisher-shaxnoza.jpg',
+      bridePhoto: './assets/couple-alisher-shaxnoza.jpg',
+      groomPhoto: './assets/couple-alisher-shaxnoza.jpg',
     }));
   };
 
@@ -276,10 +276,10 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
   const handleResetMusic = () => {
     setFormData((prev) => ({
       ...prev,
-      musicTrack: '/assets/choli-qushi.mp3',
+      musicTrack: './assets/choli-qushi.mp3',
       musicTitle: 'Çalıkuşu ("Choli qushi") seriali musiqasi',
     }));
-    royalAudioEngine.setCustomAudio('/assets/choli-qushi.mp3');
+    royalAudioEngine.setCustomAudio('./assets/choli-qushi.mp3');
     setIsPlayingTestAudio(false);
   };
 
@@ -551,7 +551,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
               <div className="p-5 rounded-2xl border border-stone-200 bg-white flex flex-col items-center text-center shadow-sm max-w-md mx-auto">
                 <div className="w-44 h-56 rounded-t-[45px] rounded-b-2xl overflow-hidden border-2 border-[#D4AF37] mb-3 bg-stone-100 shadow-inner">
                   <img
-                    src={formData.bridePhoto || formData.groomPhoto || "/assets/couple-alisher-shaxnoza.jpg"}
+                    src={formData.bridePhoto || formData.groomPhoto || "./assets/couple-alisher-shaxnoza.jpg"}
                     alt="Kelin va Kuyov"
                     className="w-full h-full object-cover object-top"
                   />

@@ -109,9 +109,18 @@ export const MasterWeddingInvitation: React.FC<MasterWeddingInvitationProps> = (
   const groomInitial = (data.groomName || 'Alisher').charAt(0).toUpperCase();
   const brideInitial = (data.brideName || 'Shahnoza').charAt(0).toUpperCase();
 
+  // Helper to safely resolve relative asset URLs (works on subfolder paths like GitHub Pages)
+  const resolveAsset = (path?: string) => {
+    if (!path) return '';
+    if (path.startsWith('http://') || path.startsWith('https://') || path.startsWith('data:')) return path;
+    if (path.startsWith('./')) return path;
+    if (path.startsWith('/')) return '.' + path;
+    return './' + path;
+  };
+
   // Photo & Music
-  const couplePhoto = data.bridePhoto || data.groomPhoto || '/assets/couple-alisher-shaxnoza.jpg';
-  const musicSrc = data.musicTrack || '/assets/choli-qushi.mp3';
+  const couplePhoto = resolveAsset(data.bridePhoto || data.groomPhoto || './assets/couple-alisher-shaxnoza.jpg');
+  const musicSrc = resolveAsset(data.musicTrack || './assets/choli-qushi.mp3');
 
   // Countdown State
   const [timeLeft, setTimeLeft] = useState({
@@ -314,25 +323,25 @@ export const MasterWeddingInvitation: React.FC<MasterWeddingInvitationProps> = (
           {/* Base paper texture */}
           <img
             className="invitation__layer"
-            src="/assets/background-C6pNkJtI.png"
+            src="./assets/background-C6pNkJtI.png"
             alt=""
           />
           {/* 360-degree rotating spiritual circle */}
           <img
             className="invitation__circle"
-            src="/assets/background-sircle-transparent-DZPBmiv7.png"
+            src="./assets/background-sircle-transparent-DZPBmiv7.png"
             alt=""
           />
           {/* Arabic calligraphy watermark on right */}
           <img
             className="invitation__arabic"
-            src="/assets/arabic-background-DBU534Xs.png"
+            src="./assets/arabic-background-DBU534Xs.png"
             alt=""
           />
           {/* Deep burgundy corner flower clusters */}
           <img
             className="invitation__layer invitation__layer--flowers"
-            src="/assets/background-red-transparent-iSRlZ9M0.png"
+            src="./assets/background-red-transparent-iSRlZ9M0.png"
             alt=""
           />
         </div>
@@ -464,7 +473,7 @@ export const MasterWeddingInvitation: React.FC<MasterWeddingInvitationProps> = (
               </h3>
               <img
                 className="w-48 sm:w-56 h-auto mx-auto my-2 object-contain drop-shadow-md"
-                src="/assets/lokatsiya-cutout-C5i7Qws-.png"
+                src="./assets/lokatsiya-cutout-C5i7Qws-.png"
                 alt="To‘yxona binosi"
               />
               <address className="not-italic text-xl sm:text-2xl font-serif font-bold text-[#3D050E] tracking-wide mt-2">
@@ -575,7 +584,7 @@ export const MasterWeddingInvitation: React.FC<MasterWeddingInvitationProps> = (
 
           {/* Left Door Panel: A (Alisher) */}
           <span className="door__panel door__panel--left">
-            <img src="/assets/door-without-seal-Cf0oMNfE.webp" alt="" />
+            <img src="./assets/door-without-seal-Cf0oMNfE.webp" alt="" />
             <span className="door__monogram" aria-hidden="true">
               {groomInitial}
             </span>
@@ -583,7 +592,7 @@ export const MasterWeddingInvitation: React.FC<MasterWeddingInvitationProps> = (
 
           {/* Right Door Panel: S (Shaxnoza) */}
           <span className="door__panel door__panel--right">
-            <img src="/assets/door-without-seal-Cf0oMNfE.webp" alt="" />
+            <img src="./assets/door-without-seal-Cf0oMNfE.webp" alt="" />
             <span className="door__monogram" aria-hidden="true">
               {brideInitial}
             </span>
@@ -592,7 +601,7 @@ export const MasterWeddingInvitation: React.FC<MasterWeddingInvitationProps> = (
           {/* Center Burgundy Wax Seal / Opener */}
           <img
             className="door__seal"
-            src="/assets/door-opener-DJNfHF4K.webp"
+            src="./assets/door-opener-DJNfHF4K.webp"
             alt={t.openGate}
           />
 
